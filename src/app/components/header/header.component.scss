@@ -1,0 +1,23 @@
+@import "./../../../assets/themes/variables";
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color: #FFF;
+}
+.login {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+.help {
+    color: #fff;
+}
+.mat-toolbar {
+    background: $primary;
+}
+a {
+    text-decoration: none;
+    color: white;
+}

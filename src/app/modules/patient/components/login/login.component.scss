@@ -1,0 +1,113 @@
+.login {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	text-align: center;
+	align-items: center;
+	width: 50%;
+	.login-title {
+		display: block;
+		font-weight: 600;
+		font-size: 22px;
+	}
+	.login-input-container {
+		width: 90%;
+		border: 0.6px solid #707070;
+		border-radius: 5px;
+		overflow: hidden;
+		position: relative;
+		.login-input {
+			width: 100%;
+			outline: none;
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+		.login-input::placeholder {
+			color: #808080;
+		}
+		.login-input-icon {
+			color: #B4B4B4;
+			position: absolute;
+			top: 16px;
+		}
+		.login-input-icon:first-child {
+			left: 8px;
+		}
+		.login-input-icon:nth-child(2) {
+			right: 8px;
+		}
+	}
+	.login-checkbox {
+		width: 90%;
+		text-align: left;
+		.checkmark-container { /* Customizing the label */
+			display: block;
+			position: relative;
+			cursor: pointer;
+			font-size: 22px;
+			font-weight: 500;
+			padding-left: 30px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			input { /* Hiding the browser's default checkbox */
+				position: absolute;
+				cursor: pointer;
+				display: none;
+			}
+			input:checked ~ .checkmark { /* When the checkbox is checked, add a blue background */
+				background-color: #2092C8 !important;
+			}
+			input:checked ~ .checkmark::after { /* showing the indicator when checked */
+				display: block;
+			}
+			.checkmark { /* Creating a custom checkbox */
+				position: absolute;
+				top: 6px;
+				left: 0;
+				height: 20px;
+				width: 20px;
+				background-color: #B4B4B4;
+				border-radius: 3px;
+			}
+			.checkmark:after { /* Create the checkmark/indicator (hidden when not checked) */
+				content: "";
+				position: absolute;
+				display: none;
+				left: 8px;
+				top: 4px;
+				width: 5px;
+				height: 10px;
+				border: solid white;
+				border-width: 0 3px 3px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+		}
+		.checkmark-container:hover {
+			input ~ .checkmark { /* On mouse-over, add a grey background color */
+				background-color: #ccc;
+			}
+		}
+	}
+	.login-submit {
+		font-weight: 600;
+		font-size: 28px;
+		color: #FFF;
+		background-color: #E99A27;
+		border: none;
+		border-radius: 33px;
+		width: 90%;
+	}
+	.login-forgotten {
+		font-weight: 600;
+		font-size: 20px;
+		color: #000;
+		border-bottom: 2px solid #000;
+	}
+	.login-signup {
+		font-weight: 600;
+		font-size: 22px;
+		color: #2092C8;
+	}
+}

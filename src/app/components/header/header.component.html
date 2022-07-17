@@ -1,0 +1,30 @@
+<mat-toolbar fxLayout="row">
+    <a routerLink="/" fxFlex fxHide.xs><span class="title">Sehaty</span></a>
+    <a routerLink="/Professionals">
+        <button mat-button fxShow fxHide.sm fxHide.xs>
+            <mat-icon class="mr">local_hospital</mat-icon>
+            Vous êtes professionnel de santé ?
+        </button>
+    </a>
+    <a routerLink="/Help">
+         <button mat-button fxShow fxShow.sm fxHide.xs>
+            <mat-icon class="mr">help</mat-icon>
+            Besoin d'aide ?
+        </button>
+    </a>
+    <a routerLink="/Patient">
+        <button mat-button fxShow fxShow.sm fxHide.xs>
+            <mat-icon class="mr">account_circle</mat-icon>
+            Se connecter
+        </button>
+    </a>
+    <ng-container>
+        <a routerLink="/Help" class="help">
+            <mat-icon class="mr" fxHide fxShow.xs>help</mat-icon>
+        </a>
+        <button mat-button fxFlex fxHide fxShow.xs routerLink="/">
+            <span class="title">Sehaty</span>
+        </button>
+        <a routerLink="/Patient" class='login' fxHide fxShow.xs>Se connecter</a>
+    </ng-container>
+</mat-toolbar>

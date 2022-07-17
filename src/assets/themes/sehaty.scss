@@ -1,0 +1,90 @@
+@use '@angular/material' as mat;
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary-palette: (
+ 50: #F8FEFF,
+ 100: #b3e2f1,
+ 200: #83cfe9,
+ 300: #58bce0,
+ 400: #3caedb,
+ 500: #26a0d6,
+ 600: #2092C8,
+ 700: #1881b5,
+ 800: #1670a1,
+ 900: #0c5180,
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   400: white,
+   500: white,
+   600: white,
+   700: white,
+   800: white,
+   900: white,
+ )
+);
+$secondary-palette: (
+ 50: #fdfbe6,
+ 100: #fbf4c2,
+ 200: #f8ec9a,
+ 300: #f5e572,
+ 400: #f4e055,
+ 500: #f1db39,
+ 600: #efca35,
+ 700: #ecb32e,
+ 800: #e99b27,
+ 900: #e3741b,
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   400: white,
+   500: white,
+   600: white,
+   700: white,
+   800: white,
+   900: white,
+ )
+);
+$warn-palette: (
+ 50: #ffebee,
+ 100: #ffcdd2,
+ 200: #ef9a9a,
+ 300: #e57373,
+ 400: #ef5350,
+ 500: #f44336,
+ 600: #e53935,
+ 700: #d32f2f,
+ 800: #c62828,
+ 900: #b71b1c,
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   400: white,
+   500: white,
+   600: white,
+   700: white,
+   800: white,
+   900: white,
+ )
+);
+
+$sehaty-primary: mat.define-palette($primary-palette, 600);
+$sehaty-secondary: mat.define-palette($secondary-palette, 800);
+$sehaty-warn: mat.define-palette($warn-palette, 600);
+
+$sehaty-theme: mat.define-light-theme((
+ color: (
+   primary: $sehaty-primary,
+   accent: $sehaty-secondary,
+   warn: $sehaty-warn,
+ )
+));
+
+@include angular-material-theme($sehaty-theme);
