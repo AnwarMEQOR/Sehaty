@@ -2,7 +2,7 @@
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	text-align: center;
 	align-items: center;
-	width: 50%;
+	max-width: 600px;
 	.login-title {
 		display: block;
 		font-weight: 600;
@@ -42,9 +42,9 @@
 			display: block;
 			position: relative;
 			cursor: pointer;
-			font-size: 22px;
+			font-size: 0.9rem;
 			font-weight: 500;
-			padding-left: 30px;
+			padding-left: 20px;
 			-webkit-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
@@ -62,10 +62,10 @@
 			}
 			.checkmark { /* Creating a custom checkbox */
 				position: absolute;
-				top: 6px;
+				top: 3px;
 				left: 0;
-				height: 20px;
-				width: 20px;
+				height: 15px;
+				width: 15px;
 				background-color: #B4B4B4;
 				border-radius: 3px;
 			}
@@ -73,8 +73,8 @@
 				content: "";
 				position: absolute;
 				display: none;
-				left: 8px;
-				top: 4px;
+				left: 5.5px;
+				top: 2px;
 				width: 5px;
 				height: 10px;
 				border: solid white;
@@ -92,16 +92,16 @@
 	}
 	.login-submit {
 		font-weight: 600;
-		font-size: 28px;
+		font-size: 1rem;
 		color: #FFF;
 		background-color: #E99A27;
 		border: none;
 		border-radius: 33px;
-		width: 60%;
+		width: 80%;
 	}
 	.login-forgotten {
 		font-weight: 600;
-		font-size: 20px;
+		font-size: 0.9rem;
 		color: #000;
 		border-bottom: 2px solid #000;
 	}
@@ -109,5 +109,22 @@
 		font-weight: 600;
 		font-size: 22px;
 		color: #2092C8;
+	}
+}
+@media screen and (min-width: 800px) {
+	.checkmark-container {
+		font-size: 1.3rem !important;
+		padding-left: 30px !important;
+		.checkmark { /* Creating a custom checkbox */
+			top: 6px !important;
+			height: 20px !important;
+			width: 20px !important;
+		}
+		.checkmark:after { /* Create the checkmark/indicator (hidden when not checked) */
+			left: 8px !important;
+			top: 4px !important;
+			width: 5px !important;
+			height: 10px !important;
+		}
 	}
 }
